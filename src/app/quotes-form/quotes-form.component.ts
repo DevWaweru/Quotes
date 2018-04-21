@@ -8,14 +8,14 @@ import { Quotes } from '../quotes';
 })
 export class QuotesFormComponent implements OnInit {
 
-  newQuoteForm = [];
+  newQuoteForm = new Quotes(0,"","",new Date());
   // newQuoteForm = [new Quotes(0,"","")];
-  @Output() addNewQuote = new EventEmitter<any>();
+  @Output() addNewQuote = new EventEmitter<Quotes>();
 
   submitQuote(newOne){
     // console.log(newOne);
     // this.newQuoteForm.push(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.author));
-    // console.log(this.newQuoteForm);
+    console.log(newOne.value.date);
     // this.newQuoteForm.push(newOne);
     this.addNewQuote.emit(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.txtQuote,newOne.value.date));
     newOne.reset();
