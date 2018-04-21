@@ -13,13 +13,14 @@ export class QuotesComponent implements OnInit {
   detailsToggle(index){
     this.newQuotes[index].showDetails=!this.newQuotes[index].showDetails;
   }
+  
   addVotes(index){
-    this.newQuotes[index].vote = this.newQuotes[index].vote+1;
+    this.newQuotes[index].vote += 1;
     console.log(this.newQuotes[index].vote);
   }
 
   minusVotes(index){
-    if(this.newQuotes[index].vote > 0)this.newQuotes[index].vote = this.newQuotes[index].vote-1;
+    if(this.newQuotes[index].vote > 0)this.newQuotes[index].vote -= 1;
     else this.newQuotes[index].vote = 0;
     console.log(this.newQuotes[index].vote);
   }

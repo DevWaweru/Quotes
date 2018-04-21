@@ -13,11 +13,11 @@ export class QuotesFormComponent implements OnInit {
   @Output() addNewQuote = new EventEmitter<Quotes>();
 
   submitQuote(newOne){
-    // console.log(newOne);
     // this.newQuoteForm.push(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.author));
-    console.log(newOne.value.date);
+    // console.log(newOne.value.date);
     // this.newQuoteForm.push(newOne);
     this.addNewQuote.emit(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.txtQuote,newOne.value.date));
+    // console.log(newOne.value.author);
     newOne.reset();
   }
 

@@ -16,8 +16,8 @@
       <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
       <p id="{{i}}">{{quoteID.date|dateCount}} days ago</p>
       <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
-      <button class="btn" (click)="addVotes(i)">Up Vote</button>
-      <button class="btn" (click)="minusVotes(i)">Down Vote</button>
+      <button class="btn" (click)="addVotes(i)"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></button>
+      <button class="btn" (click)="minusVotes(i)"><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></button>
       <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID'></app-quotes-details>
     </div>
   </div>
