@@ -4,6 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
+        <!-- <a class="btn btn-primary" href="#input-details" data-toggle="modal">Add Button</a> -->
       <app-quotes-form (addNewQuote)='addQuote($event)'></app-quotes-form>
     </div>
     <div class="col-md-6">
@@ -12,6 +13,8 @@
       <ol>
         <div *ngFor="let quoteID of newQuotes">
           <h5>{{quoteID.txtQuote}}</h5>
+          <button class="btn btn-link">Details</button>
+          
         </div>
       </ol>
 
@@ -20,7 +23,6 @@
 </div>
 
 
-<!-- <a class="btn btn-primary" href="#input-details" data-toggle="modal">Add Button</a> -->
 <!-- <div class="modal fade" id="input-details" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
