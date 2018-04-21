@@ -17,7 +17,7 @@ export class QuotesFormComponent implements OnInit {
     // this.newQuoteForm.push(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.author));
     // console.log(this.newQuoteForm);
     // this.newQuoteForm.push(newOne);
-    this.addNewQuote.emit(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.author))
+    this.addNewQuote.emit(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.txtQuote));
     newOne.reset();
   }
 

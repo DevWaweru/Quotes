@@ -11,10 +11,10 @@
       <h3>Quotes</h3>
 
       <ol>
-        <div *ngFor="let quoteID of newQuotes">
-          <h5>{{quoteID.txtQuote}}</h5>
-          <button class="btn btn-link">Details</button>
-          
+        <div *ngFor="let quoteID of newQuotes; let i = index">
+          <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
+          <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
+          <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID'></app-quotes-details>
         </div>
       </ol>
 
