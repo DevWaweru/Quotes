@@ -13,6 +13,7 @@
       <ol>
         <div *ngFor="let quoteID of newQuotes; let i = index">
           <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
+          <p id="{{i}}">{{quoteID.date}}</p>
           <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
           <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID'></app-quotes-details>
         </div>
