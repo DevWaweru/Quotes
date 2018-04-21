@@ -1,3 +1,8 @@
 export class Quotes {
-    constructor(public id:number, public author:string, public quote:string){}
+    public id:number; public author:string; public txtQuote:string
+    constructor(id,author,txtQuote){
+        this.id = id;
+        this.author = author;
+        this.txtQuote = txtQuote;
+    }
 }

@@ -8,12 +8,19 @@ import { Quotes } from '../quotes';
 })
 export class QuotesFormComponent implements OnInit {
 
-  newQuoteForm = new Quotes(0,"","");
-  @Output() addNewQuote = new EventEmitter<Quotes>();
+  newQuoteForm = [];
+  // newQuoteForm = [new Quotes(0,"","")];
+  @Output() addNewQuote = new EventEmitter<any>();
 
   submitQuote(newOne){
-    this.addNewQuote.emit(newOne.value);
+    // console.log(newOne);
+    // this.newQuoteForm.push(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.author));
+    // console.log(this.newQuoteForm);
+    // this.newQuoteForm.push(newOne);
+    this.addNewQuote.emit(new Quotes(newOne.value.id++,newOne.value.author,newOne.value.author))
+    newOne.reset();
   }
+
   constructor() { }
 
   ngOnInit() {
