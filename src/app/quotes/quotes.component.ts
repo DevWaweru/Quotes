@@ -8,7 +8,7 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
-  newQuotes = [new Quotes(1,"Richard","The World is a Cycle",new Date(2018,3,21))];
+  newQuotes = [new Quotes(1,"Richard","The World is a Cycle",new Date(2018,3,1))];
 
   detailsToggle(index){
     this.newQuotes[index].showDetails=!this.newQuotes[index].showDetails;
