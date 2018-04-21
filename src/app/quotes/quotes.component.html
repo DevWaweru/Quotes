@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-        <!-- <a class="btn btn-primary" href="#input-details" data-toggle="modal">Add Button</a> -->
+        <a class="btn btn-primary" href="#input-details" data-toggle="modal">Add Button</a>
       <app-quotes-form (addNewQuote)='addQuote($event)'></app-quotes-form>
     </div>
     <div class="col-md-6">
@@ -15,7 +15,8 @@
           <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
           <p id="{{i}}">{{quoteID.date|dateCount}} days ago</p>
           <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
-          <button class="btn">UpVote</button>
+          <button class="btn" (click)="addVotes(i)">Up Vote</button>
+          <button class="btn" (click)="minusVotes(i)">Down Vote</button>
           <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID'></app-quotes-details>
         </div>
       </ol>
@@ -25,8 +26,8 @@
 </div>
 
 
-<!-- <div class="modal fade" id="input-details" role="dialog">
-  <div class="modal-dialog">
+<div class="modal fade" id="input-details" role="dialog">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Enter Details below</h4>
@@ -38,4 +39,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
