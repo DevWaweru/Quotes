@@ -1,4 +1,29 @@
 
-.jumbotron{
+header{
     text-align: center;
+    padding-top: 25rem;
+    padding-bottom: 32rem;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Allura'
+}
+.container-fluid{
+    padding: 0;
+    background-color: #222;
+    color: white;
+}
+
+/* .form-side{
+    width: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+} */
+.incoming-form{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 10%;
+    padding-right: 12%;
 }

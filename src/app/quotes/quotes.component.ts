@@ -13,17 +13,26 @@ export class QuotesComponent implements OnInit {
   detailsToggle(index){
     this.newQuotes[index].showDetails=!this.newQuotes[index].showDetails;
   }
-  
+
   addVotes(index){
     this.newQuotes[index].vote += 1;
-    console.log(this.newQuotes[index].vote);
+    // console.log(this.newQuotes[index].vote);
   }
 
   minusVotes(index){
     if(this.newQuotes[index].vote > 0)this.newQuotes[index].vote -= 1;
     else this.newQuotes[index].vote = 0;
-    console.log(this.newQuotes[index].vote);
+    // console.log(this.newQuotes[index].vote);
   }
+  
+  // highVotes(index){
+  //   let max:number;
+  //   console.log("Initial is: "+(max+1));
+  //   if(this.newQuotes[index].vote>max+0){
+  //     max = this.newQuotes[index].vote;
+  //     console.log("Maximum is: "+max);
+  //   }
+  // }
 
   addQuote(quote){
     let quoteslength = this.newQuotes.length;
