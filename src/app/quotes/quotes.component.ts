@@ -8,7 +8,12 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
-  newQuotes = [new Quotes(1,"Richard","The World is a Cycle",new Date(2018,3,1))];
+  newQuotes = [
+    new Quotes(1,"Socrates","By all means, marry. If you get a good wife, you'll become happy; if you get a bad one, you'll become a philosopher",new Date(2018,3,1)),
+    new Quotes(2,"George Bernard Shaw, Man and Superman","The reasonable man adapts himself to the world: the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.",
+    new Date(2018,3,1)),
+    new Quotes(3,"Carroll Bryant","The moment you stop trying to become a better person, is the moment you start to become worse than what you already are.",new Date(2018,3,1)),
+    new Quotes(3,"H. Jackson Brown Jr.","Success is getting what you want. Happiness is liking what you get.",new Date(2018,3,1))];
 
   detailsToggle(index){
     this.newQuotes[index].showDetails=!this.newQuotes[index].showDetails;

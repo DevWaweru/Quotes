@@ -3,6 +3,8 @@
 </header>
 <div class="container-fluid">
   <div class="incoming-form">
+    <h3>Enter Quote here</h3>
+    <hr>
     <app-quotes-form class="form" (addNewQuote)='addQuote($event)'></app-quotes-form>
   </div>
 </div>
@@ -10,8 +12,9 @@
   <div class="row">
     <div class="col-md-12">
       <h3>Quotes</h3>
+      <hr>
     </div>
-    <div class="col-md-4" *ngFor="let quoteID of newQuotes; let i = index" appHighlight>
+    <div class="col-md-4 content" *ngFor="let quoteID of newQuotes; let i = index" appHighlight>
       <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
       <p id="{{i}}">{{quoteID.date|dateCount}} days ago</p>
       <!-- <p (click)='highVotes(i)'>Highlight</p> -->

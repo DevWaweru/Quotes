@@ -1,18 +1,22 @@
-
-header{
-    text-align: center;
-    padding-top: 25rem;
-    padding-bottom: 32rem;
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("bg.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-    font-family: 'Allura'
+header {
+  text-align: center;
+  padding-top: 20rem;
+  padding-bottom: 25rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Allura';
 }
-.container-fluid{
-    padding: 0;
-    background-color: #222;
-    color: white;
+
+.head h2 {
+  font-size: 200px;
+}
+
+.container-fluid {
+  padding: 0;
+  background-color: #222;
+  color: white;
 }
 
 /* .form-side{
@@ -21,9 +25,45 @@ header{
     padding-bottom: 3rem;
 
 } */
-.incoming-form{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 10%;
-    padding-right: 12%;
+
+.incoming-form {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  padding-left: 10%;
+  padding-right: 12%;
+}
+
+.incoming-form h3 {
+  text-align: center;
+  font-family: 'Julius Sans One';
+}
+
+hr {
+  border-color: rgba(148, 143, 143, 0.747);
+  width: 40%;
+}
+
+.col-md-12 {
+  text-align: center;
+  font-family: 'Julius Sans One';
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-size: 50px;
+}
+
+.col-md-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 21rem;
+}
+
+.content p {
+  color: rgba(43, 42, 42, 0.767);
+  font-size: 12px;
+}
+
+@media (max-width: 551px){
+    .head h2 {
+    font-size: 150px;
+  }
 }
