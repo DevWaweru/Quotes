@@ -12,12 +12,12 @@
     <div class="col-md-12">
       <h3>Quotes</h3>
     </div>
-    <div class="col-md-4" *ngFor="let quoteID of newQuotes; let i = index">
+    <div class="col-md-4" *ngFor="let quoteID of newQuotes; let i = index" appHighlight>
       <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
       <p id="{{i}}">{{quoteID.date|dateCount}} days ago</p>
       <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
-      <button class="btn" (click)="addVotes(i)"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></button>
-      <button class="btn" (click)="minusVotes(i)"><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></button>
+      <button class="btn btn-success" (click)="addVotes(i)"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></button>
+      <button class="btn btn-danger" (click)="minusVotes(i)"><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></button>
       <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID'></app-quotes-details>
     </div>
   </div>
