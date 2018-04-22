@@ -23,7 +23,7 @@ export class QuotesComponent implements OnInit {
     this.newQuotes[index].vote += 1;
     // console.log(this.newQuotes[index].vote);
   }
-
+  
   minusVotes(index){
     if(this.newQuotes[index].vote > 0)this.newQuotes[index].vote -= 1;
     else this.newQuotes[index].vote = 0;
@@ -39,6 +39,12 @@ export class QuotesComponent implements OnInit {
   //   }
   // }
 
+  quoteDeleted(del, index){
+    if(del){
+      this.newQuotes.splice(index,1);
+    }
+  }
+  
   addQuote(quote){
     let quoteslength = this.newQuotes.length;
     quote.id = quoteslength+1;

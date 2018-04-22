@@ -25,7 +25,7 @@
       <button class="btn btn-danger" (click)="minusVotes(i)">
         <i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i>
       </button>
-      <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID'></app-quotes-details>
+      <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID' (toDelete)=quoteDeleted($event,i)></app-quotes-details>
     </div>
   </div>
 </div>
