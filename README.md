@@ -1,27 +1,40 @@
-# Quotes
+# Quotes by Angular
+#### First Independent project for Moringa Core , April 23rd, 2018
+#### By **Richard Waweru**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+## Description
+The Quotes by Angular is simply a webpage that allows users to enter quotes, and display them back to the user
 
-## Development server
+Once the user submits the quotes, the quote appears on the `QUOTES` Section in the webpage.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The author of the quote and the number of likes the quotes have are hidden in the details section. Pressing the details section will reveal the details.
 
-## Code scaffolding
+The details section has a delete button. Pressing the delete button will delete the entire quote from the page.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A user can like or dislike a quote. The quote with the highest quote becomes highlighted in red.
 
-## Build
+## Specifications
+| Behavior      | Input         | Output|
+| ------------- |:-------------:| -----:|
+| Displaying Quote | Name, Date & Quote | Displays Quote and number of days passed  |
+| Show Details      | Details button      | Displays the Author of quote and number of likes |
+| Number of likes | Press thumbs-up or thumbs-down button     |    Increases or decreases numner of likes |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Preview
+**[Click here](https://devwaweru.github.io/Quotes)** to see the live site.
 
-## Running unit tests
+## Known Bugs
+No bugs so far. If found, email me at developer.waweru@gmail.com
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+    1. HTML
+    2. Bootstrap
+    3. Animate
+    4. js
+    5. Angular JS
 
-## Running end-to-end tests
+## Support and contact details
+Contact me on developer.waweru@gmail.com for any comments, reviews or advice.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+Copyright (c) **Richard Waweru**
