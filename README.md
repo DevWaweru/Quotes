@@ -18,7 +18,7 @@ A user can like or dislike a quote. The quote with the highest quote becomes hig
 | ------------- |:-------------:| -----:|
 | Displaying Quote | Name, Date & Quote | Displays Quote and number of days passed  |
 | Show Details      | Details button      | Displays the Author of quote and number of likes |
-| Number of likes | Press thumbs-up or thumbs-down button     |    Increases or decreases numner of likes |
+| Number of likes | Press thumbs-up or thumbs-down button     |    Increases or decreases number of likes |
 
 ## Preview
 **[Click here](https://devwaweru.github.io/Quotes)** to see the live site.
@@ -29,9 +29,7 @@ No bugs so far. If found, email me at developer.waweru@gmail.com
 ## Technologies Used
     1. HTML
     2. Bootstrap
-    3. Animate
-    4. js
-    5. Angular JS
+    3. Angular JS
 
 ## Support and contact details
 Contact me on developer.waweru@gmail.com for any comments, reviews or advice.
