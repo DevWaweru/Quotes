@@ -14,18 +14,23 @@
       <h3>Quotes</h3>
       <hr>
     </div>
-    <div class="col-md-4 content" *ngFor="let quoteID of newQuotes; let i = index" appHighlight>
-      <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
-      <p id="{{i}}">{{quoteID.date|dateCount}} days ago</p>
-      <!-- <p (click)='highVotes(i)'>Highlight</p> -->
-      <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
-      <button class="btn btn-success" (click)="addVotes(i)">
-        <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
-      </button>
-      <button class="btn btn-danger" (click)="minusVotes(i)">
-        <i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i>
-      </button>
-      <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID' (toDelete)=quoteDeleted($event,i)></app-quotes-details>
+    <div class="col-md-4 content" *ngFor="let quoteID of newQuotes; let i = index">
+      <div id="{{i}}" appHighlight *ngIf="quoteID.vote===maxCount && quoteID.vote>0">
+        <!-- {{maxCount}} -->
+      </div>
+      <div>
+        <h5 id="{{i}}">{{quoteID.txtQuote}}</h5>
+        <p id="{{i}}">{{quoteID.date|dateCount}} days ago</p>
+        <!-- <p (click)='highVotes(i)'>Highlight</p> -->
+        <button class="btn btn-link" (click)="detailsToggle(i)">Details</button>
+        <button class="btn btn-success" (click)="addVotes(i)">
+          <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-danger" (click)="minusVotes(i)">
+          <i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i>
+        </button>
+        <app-quotes-details *ngIf="quoteID.showDetails" [quotes]='quoteID' (toDelete)=quoteDeleted($event,i)></app-quotes-details>
+      </div>
     </div>
   </div>
 </div>
